@@ -168,6 +168,7 @@ export interface Database {
           status: ProductStatus
           is_featured: boolean
           sort_order: number
+          view_count: number
           created_at: string
           updated_at: string
         }
@@ -184,6 +185,7 @@ export interface Database {
           status?: ProductStatus
           is_featured?: boolean
           sort_order?: number
+          view_count?: number
           created_at?: string
           updated_at?: string
         }

@@ -2,11 +2,11 @@ node_modules/
 dist/
 .vercel/
 *.log
-supabase/
+supabase/migrations
 
 
 .env
+.env.example
 .env.local
 .env.production
-.env.*.local
-.env.example
+.env.*
