@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.vercel/
+*.log
+supabase/
+
+
+.env
+.env.local
+.env.production
+.env.*.local
+.env.example
