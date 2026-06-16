@@ -10,3 +10,5 @@ supabase/migrations
 .env.local
 .env.production
 .env.*
+
+postman
