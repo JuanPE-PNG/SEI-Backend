@@ -10,7 +10,7 @@ export const corsMiddleware = cors({
     return env.ALLOWED_ORIGINS.includes(origin) ? origin : null
   },
   allowMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-  allowHeaders: ['Content-Type', 'Authorization'],
+  allowHeaders: ['Content-Type', 'Authorization', 'X-Session-Token'],
   exposeHeaders: ['X-Total-Count', 'X-Page', 'X-Per-Page'],
   maxAge: 86400,       // 24h cache del preflight
   credentials: true,

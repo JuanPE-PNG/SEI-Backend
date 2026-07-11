@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "node --env-file=.env --import tsx/esm --watch src/server.ts",
     "typecheck": "tsc --noEmit",
-    "build": "tsc"
+    "build": "tsc",
+    "admin:create": "node --env-file=.env --import tsx/esm scripts/create-admin.ts",
+    "test:api": "newman run postman/SEI_Backend.postman_collection.json --timeout-request 10000",
+    "test:api:save": "newman run postman/SEI_Backend.postman_collection.json --timeout-request 10000 --reporters cli,json --reporter-json-export postman/last-run.json"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.108.2",
@@ -15,6 +18,7 @@
   "devDependencies": {
     "@hono/node-server": "^2.0.5",
     "@types/node": "^25.9.3",
+    "newman": "^6.2.2",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3"
   }

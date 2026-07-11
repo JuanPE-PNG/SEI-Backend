@@ -13,7 +13,6 @@ const contactSchema = z.object({
   message:      z.string().trim().min(10).max(2000),
 })
 
-// POST /api/v1/contact — guardar lead de contacto
 contact.post('/', writeRateLimit, async (c) => {
   const body = await c.req.json().catch(() => null)
   const parsed = contactSchema.safeParse(body)

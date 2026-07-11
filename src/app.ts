@@ -14,6 +14,9 @@ import contactRoutes          from './modules/contact/contact.routes.js'
 import adminAuthRoutes        from './modules/admin/auth/auth.routes.js'
 import adminSoftwareRoutes    from './modules/admin/software/software.routes.js'
 import adminHardwareRoutes    from './modules/admin/hardware/hardware.routes.js'
+import adminTagsRoutes        from './modules/admin/tags/tags.routes.js'
+import adminLeadsRoutes       from './modules/admin/leads/leads.routes.js'
+import adminUsersRoutes       from './modules/admin/users/users.routes.js'
 
 const app = new Hono().basePath('/api')
 
@@ -34,6 +37,9 @@ app.route('/v1/contact', contactRoutes)
 app.route('/v1/admin/auth', adminAuthRoutes)
 app.route('/v1/admin/software', adminSoftwareRoutes)
 app.route('/v1/admin/hardware', adminHardwareRoutes)
+app.route('/v1/admin/tags', adminTagsRoutes)
+app.route('/v1/admin/leads', adminLeadsRoutes)
+app.route('/v1/admin/users', adminUsersRoutes)
 
 app.notFound((c) =>
   c.json({ error: `Ruta no encontrada: ${c.req.method} ${c.req.path}` }, 404)
